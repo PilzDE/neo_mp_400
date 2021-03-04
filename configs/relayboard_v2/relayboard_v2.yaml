@@ -10,8 +10,9 @@
 #            device configuration              #
 ################################################
 port: /dev/neo-relayboard
-request_rate: 50
 motor_delay: 0.015
+message_timeout: 2.0
+request_rate: 25
 
 #################################################
 #                 battery                       #
@@ -73,7 +74,7 @@ log: false
 drive2:
   motor_active: true
   homing_active: false
-  EncIncrPerRevMot: 10000
+  EncIncrPerRevMot: 4096
   VelMeasFrqHz: 1
   GearRatio: 8
   BeltRatio: 1
@@ -88,7 +89,7 @@ drive2:
 drive3:
   motor_active: true
   homing_active: false
-  EncIncrPerRevMot: 10000
+  EncIncrPerRevMot: 4096
   VelMeasFrqHz: 1
   GearRatio: 8
   BeltRatio: 1
