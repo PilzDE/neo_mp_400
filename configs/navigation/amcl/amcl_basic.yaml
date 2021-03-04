@@ -4,7 +4,7 @@
 
     #####Minimum allowed number of particles (default:100)
 
- max_particles : 2000
+ max_particles : 5000
 
     #####Maximum allowed number of particles (default:5000)
 
@@ -16,11 +16,11 @@
 
     #####Upper standard normal quantile for (1 - p), where p is the probability that the error on the estimated distrubition will be less than kld_err. 
 
- update_min_d : 0.05 
+ update_min_d : 0.2 
 
     #####Translational movement required before performing a filter update. (default:0.2)
 
- update_min_a: 0.05 
+ update_min_a: 0.2
 
     #####Rotational movement required before performing a filter update. 
 
@@ -136,23 +136,23 @@
 
     #####Which model to use, either "diff", "omni", "diff-corrected" or "omni-corrected". 
 
- odom_alpha1 : 0.001
+ odom_alpha1 : 0.01
 
     #####Specifies the expected noise in odometry's rotation estimate from the rotational component of the robot's motion. 
 
- odom_alpha2 : 0.001
+ odom_alpha2 : 0.01
 
     #####Specifies the expected noise in odometry's rotation estimate from translational component of the robot's motion. 
 
- odom_alpha3 : 0.001
+ odom_alpha3 : 0.01
 
     #####Specifies the expected noise in odometry's translation estimate from the translational component of the robot's motion. 
 
- odom_alpha4 : 0.001
+ odom_alpha4 : 0.01
 
     #####Specifies the expected noise in odometry's translation estimate from the rotational component of the robot's motion. 
 
- odom_alpha5 : 0.001
+ odom_alpha5 : 0.01
 
     #####Translation-related noise parameter (only used if model is "omni"). 
 
