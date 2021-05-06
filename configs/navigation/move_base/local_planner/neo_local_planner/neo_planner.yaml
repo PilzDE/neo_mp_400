@@ -4,7 +4,7 @@ NeoLocalPlanner:
   acc_lim_x : 0.15
 
   # The rotational acceleration limit of the robot in radians/sec^2
-  acc_lim_theta : 0.4
+  acc_lim_theta : 0.6
 
   # The maximum x velocity for the robot in m/s.
   max_vel_x : 0.5

@@ -13,8 +13,8 @@
 
                 <!--sensors-->
 
-                <!--single s300 at the front-->
-                <include file="$(find neo_mp_400)/configs/lidar/lidar.launch"/>
+                <!--psen_scan-->
+		<include file="$(find neo_mp_400)/launch/psen_scan_v2.launch"/>
 
                 <!--teleoperation-->
 
@@ -28,5 +28,7 @@
                         <param name="use_gui" value="false" />
                 </node>
                 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-
-</launch>
+		
+		<node pkg="tf" type="static_transform_publisher" name="psen_scan_link_broadcaster" args=".3 .3 .2 0 0 .2231064 .9747941 /base_link /laser_1_scan 1" />
+	
+	</launch>
