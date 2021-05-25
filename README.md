@@ -1,18 +1,26 @@
-# ROS configuration and launch files for Neobotix MP-400
+# How to do slam
+Connect another pc via wifi.
+Set (on that PC) `ROS_MASTER_URI` and `ROS_IP` correctly.
+And (on that PC) run `rviz`.
 
-This package contains configuration and launch files for Neobotix MP-400.
+On the neobotix PC, run 
+```
+roslaunch neo_mp_400 gmapping_basic.launch
+```
+ 
+When done mapping (while keeping gmapping running), run on the neobotix PC:
+```
+rosrun map_server map_saver <desired_name>
+```
 
-![Neobotix MP-400](https://www.neobotix-roboter.de/fileadmin/_processed_/6/0/csm_Roboter-MP-400-Hauptansicht_b676717b1f.jpg)
+# How to navigation
+On the neobotix PC, run 
+```
+MAP_NAME=pd roslaunch neo_mp_400 navigation_basic_amcl.launch
+```
+(Or any other map name instead of `pd`.)
 
-The [MP-400](https://www.neobotix-robots.com/mobile-robot-mp-400.html) is a small, agile mobile robot for material flow and intralogistics in industrial applications. Automatic charging station and load handling system available.
-
-# Documentation
-
-Please find our documentations at https://docs.neobotix.de/
-
-# Contact information
-
-For more information please visit our website at www.neobotix-robots.com. 
-If you have any questions, just get in touch with us:
-* General information: http://www.neobotix-robots.com/company-contact.html
-* ROS related questions: ros@neobotix.de
+To send navigation goals, navigate to `neo_mp_400/scripts` and
+* `./go_home.sh` sends the robot to (0,0,0), which is where you started slam
+* `./go_left.sh` sends the robot the place in the hallway
+* `./go_right.sh` sends the robot the place next to the inspection cell
