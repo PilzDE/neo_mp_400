@@ -1,7 +1,7 @@
-footprint: [[0.4,0.4],[-0.4,0.4],[-0.4,-0.4],[0.4,-0.4]]
+footprint: [[0.6,0.5],[-0.5,0.5],[-0.5,-0.5],[0.6,-0.5]]
 
 inflation_layer:
-  inflation_radius: 0.6
+  inflation_radius: 0.8
   cost_scaling_factor: 5
 
 observation_sources: laser_1

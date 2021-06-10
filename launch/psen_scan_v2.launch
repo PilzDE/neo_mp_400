@@ -32,10 +32,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <arg name="prefix" default="laser_1" />
 
   <!-- Start angle of measurement in radian -->
-  <arg name="angle_start" default="$(eval -105/180.0 * pi)" />
+  <arg name="angle_start" default="$(eval -105.0/180.0 * pi)" />
 
   <!-- End angle of measurement in radian -->
   <arg name="angle_end" default="$(eval 105.0/180.0 * pi)" />
+
+  <!-- Scan resolution in radian -->
+  <arg name="resolution" default="$(eval radians(0.1))" />
 
   <!-- Set the following to true in order to publish scan data as soon as a UDP packet is ready, instead of waiting for a full scan -->
   <arg name="fragmented_scans" default="false" />
@@ -48,6 +51,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <param name="prefix" value="$(arg prefix)" />
     <param name="angle_start" value="$(arg angle_start)" />
     <param name="angle_end" value="$(arg angle_end)" />
+    <param name="resolution" value="$(arg resolution)" />
     <param name="fragmented_scans" value="$(arg fragmented_scans)" />
   </node>
 
