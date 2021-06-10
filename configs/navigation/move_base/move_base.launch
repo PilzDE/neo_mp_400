@@ -35,7 +35,7 @@
 
     <!-- NeoLocalPlanner -->
     <param name="base_local_planner" value="neo_local_planner/NeoLocalPlanner"/>
-    <rosparam file="$(find neo_mp_400)/configs/navigation/move_base/local_planner/neo_local_planner/neo_planner.yaml" command="load" />
+    <rosparam file="$(find neo_mp_400)/configs/navigation/move_base/local_planner/neo_local_planner/neo_planner_tutorial.yaml" command="load" />
 
     <!-- Common -->
     <rosparam file="$(find neo_mp_400)/configs/navigation/move_base/move_base/move_base.yaml" command="load" />
