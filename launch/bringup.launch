@@ -29,6 +29,6 @@
                 </node>
                 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 		
-		<node pkg="tf" type="static_transform_publisher" name="psen_scan_link_broadcaster" args=".3 .3 .2 0 0 .2231064 .9747941 /base_link /laser_1_scan 1" />
+		<node pkg="tf" type="static_transform_publisher" name="psen_scan_link_broadcaster" args=".35 .24 .2 0 0 .2231064 .9747941 /base_link /laser_1_scan 1" />
 	
 	</launch>
