@@ -8,3 +8,7 @@ local_costmap:
   width: 5
   height: 5
   resolution: 0.02
+
+  observation_sources: laser_1
+
+  laser_1: {sensor_frame: laser_1_scan , data_type: LaserScan, topic: laser_scanner/scan, marking: true, clearing: true, obstacle_range: 5.0, raytrace_range: 8.0}
